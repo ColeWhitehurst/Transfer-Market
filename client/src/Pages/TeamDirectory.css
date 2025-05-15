@@ -1,0 +1,18 @@
+.team-directory {
+  padding: 2rem;
+  text-align: center;
+}
+
+.league-filter {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}

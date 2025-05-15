@@ -1,0 +1,49 @@
+.compare-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.team-selection-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.selectable-wrapper {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: border 0.2s;
+  cursor: pointer;
+}
+
+.selectable-wrapper.selected {
+  border: 2px solid var(--accent-color);
+}
+
+.comparison-grid {
+  margin-top: 3rem;
+}
+
+.selected-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-card-expanded {
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.team-logo-large {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}

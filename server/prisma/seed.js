@@ -126,6 +126,7 @@ async function main() {
             name: team.strTeam,
             logoUrl: team.strTeamBadge,
             budget: Math.floor(Math.random() * 100_000_000) + 100_000_000,
+            league,
           },
         });
       } catch (err) {

@@ -10,9 +10,12 @@ datasource db {
 model Team {
   id        Int      @id @default(autoincrement())
   name      String
-  logoUrl   String?  // From TheSportsDB
+  logoUrl   String? 
   budget    Int
+  league    String?
   players   Player[]
+  bids      Bid[]
+  manager     Manager?
 }
 
 model Player {
@@ -21,8 +24,28 @@ model Player {
   age         Int?
   position    String?
   nationality String?
-  imageUrl    String?  // From TheSportsDB
-  marketValue Int      // Estimated using API-Football stats
+  imageUrl    String?  
+  marketValue Int      
   teamId      Int?
   team        Team?    @relation(fields: [teamId], references: [id])
+  bids        Bid[]
+}
+
+model Manager {
+  id       Int     @id @default(autoincrement())
+  username String  @unique
+  password String  
+  teamId   Int     @unique
+  team     Team    @relation(fields: [teamId], references: [id])
+}
+
+model Bid {
+  id        Int      @id @default(autoincrement())
+  amount    Int
+  status    String   @default("pending")
+  playerId  Int
+  teamId    Int
+  createdAt DateTime @default(now())
+  player    Player   @relation(fields: [playerId], references: [id])
+  team      Team     @relation(fields: [teamId], references: [id])
 }
