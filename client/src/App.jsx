@@ -52,13 +52,16 @@ function App() {
         <Routes>
           <Route path="/signup" element={<Signup />} />
           <Route path="/" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/scout" element={<Scout />} />
-          <Route path="/players/:id" element={<PlayerProfile />} />
-          <Route path="/bids" element={<TransferMarket />} />
-          <Route path="/teams" element={<TeamDirectory />} />
-          <Route path="/compare/players" element={<ComparePlayers />} />
-          <Route path="/compare/teams" element={<CompareTeams />} />
+
+          <Route element={<Layout />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/scout" element={<Scout />} />
+            <Route path="/players/:id" element={<PlayerProfile />} />
+            <Route path="/bids" element={<TransferMarket />} />
+            <Route path="/teams" element={<TeamDirectory />} />
+            <Route path="/compare/players" element={<ComparePlayers />} />
+            <Route path="/compare/teams" element={<CompareTeams />} />
+          </Route>
         </Routes>
       </div>
     </>

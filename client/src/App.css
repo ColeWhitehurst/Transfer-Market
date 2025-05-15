@@ -67,3 +67,17 @@ button:hover {
     opacity: 1;
   }
 }
+
+.main-content {
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0b0c1e, #1a1a2e);
+  color: #f5f5f5;
+}
+
+.loading {
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 5rem;
+}
