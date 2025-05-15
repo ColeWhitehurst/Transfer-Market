@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PlayerCard from "../Components/PlayerCard";
 import { getPlayers } from "../api/players";
+import "./Scout.css";
 
 const Scout = () => {
   const [players, setPlayers] = useState([]);

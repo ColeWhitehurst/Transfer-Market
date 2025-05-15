@@ -50,7 +50,7 @@ function App() {
       <div className={!isAuthPage ? "app-container themed" : ""}>
         {!isAuthPage && <Navbar />}
         <Routes>
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/register" element={<Signup />} />
           <Route path="/" element={<Login />} />
 
           <Route element={<Layout />}>

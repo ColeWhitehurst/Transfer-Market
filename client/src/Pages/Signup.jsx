@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Context/AuthContext";
 import { signup } from "../api/auth";
+import "./Signup.css"
 
 const Signup = () => {
   const { login } = useAuth();

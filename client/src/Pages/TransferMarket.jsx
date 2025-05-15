@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../Context/AuthContext";
 import { getAllBids, updateBidStatus } from "../api/bids";
+import './TransferMarket.css';
 
 const TransferMarket = () => {
   const { token, teamId } = useAuth();

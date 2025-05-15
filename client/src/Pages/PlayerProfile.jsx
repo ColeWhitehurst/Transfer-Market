@@ -4,6 +4,7 @@ import { useAuth } from "../Context/AuthContext";
 import StatGraph from "../Components/StatsGraph";
 import { getPlayerById } from "../api/players";
 import { placeBid, getBidsForPlayer } from "../api/bids";
+import "./PlayerProfile.css";
 
 const PlayerProfile = () => {
   const [bids, setBids] = useState([]);

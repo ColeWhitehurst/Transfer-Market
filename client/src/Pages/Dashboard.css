@@ -1,0 +1,83 @@
+.dashboard-container {
+  padding: 2rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  font-family: var(--font-body);
+}
+
+.dashboard-container h2 {
+  font-size: var(--font-size-heading);
+  font-family: var(--font-heading);
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+.team-overview {
+  background-color: #1a1a2e;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.team-overview h3 {
+  font-size: var(--font-size-subheading);
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.team-overview img {
+  margin: 0.75rem 0;
+  border-radius: 8px;
+}
+
+.team-overview p {
+  font-size: var(--font-size-small);
+  margin: 0.25rem 0;
+}
+
+.team-roster {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 2rem;
+}
+
+.team-roster li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: var(--font-size-small);
+}
+
+.dashboard-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dashboard-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.dashboard-links a:hover {
+  color: #a0f0ff;
+}
+
+.dashboard-links button {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dashboard-links button:hover {
+  background-color: #5848cc;
+}

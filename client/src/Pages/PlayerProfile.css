@@ -1,0 +1,85 @@
+.player-profile {
+  padding: 2rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  font-family: var(--font-body);
+}
+
+.player-profile h2 {
+  font-size: var(--font-size-heading);
+  font-family: var(--font-heading);
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.player-profile img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.player-profile p {
+  font-size: var(--font-size-small);
+  margin: 0.3rem 0;
+}
+
+.bid-form {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 300px;
+}
+
+.bid-form input {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #1f2235;
+  color: #f5f5f5;
+  font-size: 1rem;
+}
+
+.bid-form input:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+.bid-form button {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.bid-form button:hover {
+  background-color: #5848cc;
+}
+
+.player-bids {
+  margin-top: 2rem;
+}
+
+.player-bids h3 {
+  font-size: var(--font-size-subheading);
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.player-bids ul {
+  list-style: none;
+  padding: 0;
+  font-size: var(--font-size-small);
+}
+
+.player-bids li {
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.4rem;
+}

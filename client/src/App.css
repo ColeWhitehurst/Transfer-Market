@@ -2,6 +2,14 @@
   --primary-color: #4682b4;
   --accent-color: #990000;
   --text-color: #00356b;
+
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Inter", sans-serif;
+
+  --font-size-base: 16px;
+  --font-size-small: 0.85rem;
+  --font-size-heading: 2rem;
+  --font-size-subheading: 1.25rem;
 }
 
 body,
@@ -19,20 +27,74 @@ h2,
 h3,
 h4,
 h5 {
+  font-family: var(--font-heading);
   color: var(--accent-color);
+  margin-bottom: 0.75rem;
 }
 
 button {
   background-color: var(--accent-color);
   color: #ffffff;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.1rem;
   border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 button:hover {
-  opacity: 0.9;
+  background-color: #5848cc;
+}
+
+button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+.card {
+  background-color: #1a1a2e;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+  color: var(--text-color);
+}
+
+.card:hover {
+  transform: scale(1.02);
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #1f2235;
+  color: #f5f5f5;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #a0f0ff;
 }
 
 .splash-screen {
@@ -43,7 +105,7 @@ button:hover {
   height: 100vh;
   background-color: var(--primary-color);
   color: var(--text-color);
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   text-align: center;
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -71,8 +133,8 @@ button:hover {
 .main-content {
   padding: 2rem;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0b0c1e, #1a1a2e);
-  color: #f5f5f5;
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .loading {
@@ -80,4 +142,20 @@ button:hover {
   text-align: center;
   font-size: 1.25rem;
   margin-top: 5rem;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-base: 15px;
+    --font-size-heading: 1.5rem;
+    --font-size-subheading: 1.1rem;
+  }
+
+  .splash-screen h1 {
+    font-size: 2rem;
+  }
+
+  .splash-screen p {
+    font-size: 1rem;
+  }
 }

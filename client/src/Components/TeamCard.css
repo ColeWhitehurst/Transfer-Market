@@ -26,11 +26,17 @@
 }
 
 .team-info h4 {
+  font-size: var(--font-size-subheading);
+  font-family: var(--font-heading);
+  font-weight: 600;
   margin: 0;
-  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .team-info .league {
-  font-size: 0.85rem;
+  font-size: var(--font-size-small);
+  font-family: var(--font-body);
+  font-weight: 400;
   opacity: 0.75;
+  margin-top: 0.25rem;
 }
