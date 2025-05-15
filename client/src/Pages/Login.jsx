@@ -2,10 +2,17 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Context/AuthContext";
 import { login as apiLogin } from "../api/auth";
+import "./Login.css";
 
 const Login = () => {
-  const { login } = useAuth();
+  const { login, token } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (token) {
+        navigate('/dashboard');
+    }
+  })
 
   const [formData, setFormData] = useState({
     username: "",
