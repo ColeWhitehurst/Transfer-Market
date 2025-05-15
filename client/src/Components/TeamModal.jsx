@@ -1,8 +1,17 @@
+import { useTheme } from '../Context/ThemeContext';
 import "./TeamModal.css";
 
 const TeamModal = ({ team, onClose }) => {
+    const { theme } = useTheme();
+
+    const style = {
+        "--primary-color": theme.primary,
+        "--accent-color": theme.accent,
+        "--text-color": theme.text,
+    };
+
   return (
-    <div className="team-modal-overlay" onClick={onClose}>
+    <div className="team-modal-overlay" style={style} onClick={onClose}>
       <div className="team-modal" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}>
           ×

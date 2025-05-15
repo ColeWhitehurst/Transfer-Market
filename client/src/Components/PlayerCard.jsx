@@ -1,11 +1,19 @@
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "../Context/ThemeContext";
 import "./PlayerCard.css";
 
 const PlayerCard = ({ player }) => {
   const navigate = useNavigate();
+  const { theme } = useTheme();
+
+  const style = {
+    "--primary-color": theme.primary,
+        "--accent-color": theme.accent,
+        "--text-color": theme.text,
+  }
 
   return (
-    <div className="player-card" onClick={() => navigate(`/players/${player.id}`)}>
+    <div className="player-card" style={style} onClick={() => navigate(`/players/${player.id}`)}>
       <img
         src={player.imageUrl || "https://via.placeholder.com/80x80?text=No+Image"}
         alt={player.name}
